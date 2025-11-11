@@ -26,7 +26,7 @@ export default async function ContentPage({ searchParams }: Props) {
 
     return (
         <main className={styles.container}>
-            <h1 className={styles.heading}>お知らせ・ニュース一覧</h1>
+            <h1 className={styles.heading}>お知らせ一覧</h1>
 
             <ul className={styles.newsList}>
                 {newsList.map((news) => (

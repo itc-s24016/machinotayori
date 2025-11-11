@@ -29,7 +29,7 @@ export default async function Home() {
                     ))}
                 </ul>
                 <div className={styles.moreLink}>
-                    <Link href="/content">→ すべてのお知らせを見る</Link>
+                    <Link href="/content">→ もっと見る</Link>
                 </div>
             </section>
         </main>
