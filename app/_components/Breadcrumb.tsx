@@ -20,7 +20,7 @@ export default function Breadcrumb() {
 
     const paths = segments.map((segment, index) => {
         const href = "/" + segments.slice(0, index + 1).join("/");
-        const name = pathNameMap[segment] || decodeURIComponent(segment);
+        const name = pathNameMap[segment] || segment;
         return { name, href };
     });
 
@@ -32,11 +32,7 @@ export default function Breadcrumb() {
                 </li>
                 {paths.map((p, i) => (
                     <li key={p.href}>
-                        {i === paths.length - 1 ? (
-                            <span>{decodeURIComponent(p.name)}</span>
-                        ) : (
-                            <Link href={p.href}>{decodeURIComponent(p.name)}</Link>
-                        )}
+                        {i === paths.length - 1 ? <span>{p.name}</span> : <Link href={p.href}>{p.name}</Link>}
                     </li>
                 ))}
             </ul>

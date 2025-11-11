@@ -1,6 +1,6 @@
 import "./globals.css";
 import Header from "./_components/Header";
-import Breadcrumb from "./_components/Breadcrumbs";
+import Breadcrumb from "./_components/Breadcrumb";
 
 export const metadata = {
     title: "まちのたより",
