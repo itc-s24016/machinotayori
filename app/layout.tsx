@@ -1,17 +1,21 @@
-import Header from "@/_components/Header";
-import Footer from "@/_components/Footer";
+import "./globals.css";
+import Header from "./_components/Header";
+import Breadcrumb from "./_components/Breadcrumbs";
 
-type Props = {
-    children: React.ReactNode;
+export const metadata = {
+    title: "まちのたより",
+    description: "存在しない町の、暮らしの声をお届けします。",
 };
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ja">
         <body>
         <Header />
-        <main>{children}</main>
-        <Footer />
+        <div style={{ paddingTop: "64px" }}>
+            <Breadcrumb />
+            {children}
+        </div>
         </body>
         </html>
     );

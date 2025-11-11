@@ -1,0 +1,77 @@
+:global(body) {
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    margin: 0;
+    background: #f8f8f8;
+}
+
+:global(main) {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    color: #006644;
+    margin-bottom: 0.5rem;
+}
+
+.newsSection h2 {
+    border-left: 6px solid #006644;
+    padding-left: 0.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.newsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.newsItem {
+    border-bottom: 1px solid #ddd;
+    padding: 0.8rem 0;
+}
+
+.newsLink {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #222;
+}
+
+.newsDate {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.newsTitle {
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+}
+
+.moreLink {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+.moreLink a {
+    color: #006644;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    :global(main) {
+        padding: 1rem;
+    }
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+}

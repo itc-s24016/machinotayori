@@ -1,32 +1,65 @@
-import { getAllNewsList, News } from "../_lib/microcms";
+import { getNewsList, News } from "../_lib/microcms";
 import Link from "next/link";
-import styles from "../../styles/Article.module.css";
+import styles from "./page.module.css";
 
-export default async function ContentPage() {
-    // microCMS から全記事を取得
-    const data = await getAllNewsList();
-    const newsList: News[] = data;
+// microCMSの1ページあたりの件数
+const PER_PAGE = 5;
+
+type Props = {
+    searchParams?: { page?: string };
+};
+
+export default async function ContentPage({ searchParams }: Props) {
+    const currentPage = Number(searchParams?.page || "1");
+    const offset = (currentPage - 1) * PER_PAGE;
+
+    // microCMSから記事取得（ページネーション対応）
+    const data = await getNewsList({
+        limit: PER_PAGE,
+        offset,
+        orders: "-publishedAt",
+    });
+
+    const newsList: News[] = data.contents;
+    const totalCount = data.totalCount;
+    const totalPages = Math.ceil(totalCount / PER_PAGE);
 
     return (
         <main className={styles.container}>
-            <h1>記事一覧</h1>
-            <section className={styles.newsList}>
+            <h1 className={styles.heading}>お知らせ・ニュース一覧</h1>
+
+            <ul className={styles.newsList}>
                 {newsList.map((news) => (
-                    <article key={news.id} className={styles.newsCard}>
-                        {news.thumbnail && (
-                            <img
-                                src={news.thumbnail.url}
-                                alt={news.title}
-                                className={styles.thumbnail}
-                            />
-                        )}
-                        <h2>
-                            <Link href={`/${news.id}`}>{news.title}</Link>
-                        </h2>
-                        <p>{news.description}</p>
-                    </article>
+                    <li key={news.id} className={styles.newsItem}>
+                        <Link href={`/content/${news.id}`} className={styles.newsLink}>
+              <span className={styles.newsDate}>
+                {new Date(news.publishedAt).toLocaleDateString("ja-JP")}
+              </span>
+                            <span className={styles.newsTitle}>{news.title}</span>
+                        </Link>
+                        <p className={styles.newsDescription}>{news.description}</p>
+                    </li>
                 ))}
-            </section>
+            </ul>
+
+            <div className={styles.pagination}>
+                {currentPage > 1 && (
+                    <Link
+                        href={`/content?page=${currentPage - 1}`}
+                        className={styles.pageButton}
+                    >
+                        ← 前へ
+                    </Link>
+                )}
+                {currentPage < totalPages && (
+                    <Link
+                        href={`/content?page=${currentPage + 1}`}
+                        className={styles.pageButton}
+                    >
+                        次へ →
+                    </Link>
+                )}
+            </div>
         </main>
     );
 }

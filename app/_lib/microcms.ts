@@ -1,9 +1,9 @@
-import { createClient } from "microcms-js-sdk";
+import {createClient} from "microcms-js-sdk";
 // microCMSから取得するデータの型を定義
 import type {
     MicroCMSQueries,
     MicroCMSImage,
-    MicroCMSListContent,
+    MicroCMSListContent
 } from "microcms-js-sdk";
 
 // 記事の型を定義
@@ -12,6 +12,7 @@ export type News = {
     description: string;
     content: string;
     thumbnail: MicroCMSImage;
+    publishedAt: string;
 } & MicroCMSListContent;
 
 // サービスドメインが設定されていない場合
