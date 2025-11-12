@@ -1,5 +1,6 @@
 import { getNewsList, News } from "./_lib/microcms";
 import Link from "next/link";
+import HeroSlider from "./_components/HeroSlider";
 import styles from "./page.module.css";
 
 export default async function Home() {
@@ -10,8 +11,7 @@ export default async function Home() {
     return (
         <main className={styles.container}>
             <section className={styles.hero}>
-                <h1>まちのたより</h1>
-                <p>存在しない町の、暮らしの声をお届けします</p>
+                <HeroSlider />
             </section>
 
             <section className={styles.newsSection}>

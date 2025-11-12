@@ -1,0 +1,81 @@
+.slider {
+    /*position: relative;*/
+    /*width: 100%;*/
+    /*height: 400px;*/
+    /*overflow: hidden;*/
+    position: relative;
+    height: 500px; /* スライド高さ */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    text-align: center;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5); /* 半透明白フィルター */
+    z-index: 1; /* 文字より下に */
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2; /* 文字を前面に表示 */
+    text-align: center;
+}
+
+.overlayText {
+    display: inline-block;
+    padding: 0.8rem 2.75rem; /* 上下左右の余白 */
+    background: rgba(255, 255, 255, 0.075); /* 半透明白 */
+    border-radius: 9999px; /* 円形/丸み */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.005); /* 文字をさらに読みやすく */
+    backdrop-filter: blur(0.1px); /* 背景をぼかす */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.000005); /* 円の周りにふんわり影 */
+}
+
+.overlayText::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.8);
+    filter: blur(8px); /* 輪郭をぼかす */
+    z-index: -1; /* 背景の後ろに配置 */
+}
+
+.overlay h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay p {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 260px;
+    }
+
+    .overlay h1 {
+        font-size: 1.6rem;
+    }
+}
