@@ -1,13 +1,15 @@
 import { getNewsDetail, News } from "../../_lib/microcms";
 import styles from "../page.module.css";
 
+// Promise 対応の型定義
 interface ContentPageProps {
-    params: { id: string };
+    params: Promise<{ id: string }>;
 }
 
 export default async function ContentPage({ params }: ContentPageProps) {
+    const { id } = await params;
     // microCMS から記事詳細を取得
-    const news: News = await getNewsDetail(params.id);
+    const news: News = await getNewsDetail(id);
 
     return (
         <main className={styles.container}>

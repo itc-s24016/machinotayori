@@ -53,9 +53,9 @@ export const getNewsDetail = async (
 };
 
 // 全ての記事を取得する関数
-export const getAllNewsList = async () => {
-    const listData = await client.getAllContents<News>({
+export const getAllNewsList = async (queries?: { limit?: number; offset?: number; orders?: string }) => {
+    return client.get({
         endpoint: "posts",
+        queries,
     });
-    return listData;
 };

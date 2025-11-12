@@ -32,6 +32,7 @@
 .newsDate {
     font-size: 0.9rem;
     color: #666;
+    padding-right: 10px;
 }
 
 .newsTitle {
