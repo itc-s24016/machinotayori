@@ -1,5 +1,6 @@
 import { getNewsDetail, News } from "../../_lib/microcms";
 import styles from "../page.module.css";
+import Image from "next/image";
 
 // Promise 対応の型定義
 interface ContentPageProps {
@@ -14,16 +15,17 @@ export default async function ContentPage({ params }: ContentPageProps) {
     return (
         <main className={styles.container}>
             <article className={styles.article}>
-                <h1 className={styles.title}>{news.title}</h1>
-                <time className={styles.date}>
+                <h1 className={styles.heading}>{news.title}</h1>
+                <time className={styles.newsDate}>
                     {new Date(news.publishedAt).toLocaleDateString("ja-JP")}
                 </time>
                 {news.thumbnail && (
-                    <img
+                    <Image
                         src={news.thumbnail.url}
                         alt={news.title}
                         width={1200}
-                        height={630}
+                        height={900}
+                        priority
                         className={styles.thumbnail}
                     />
                 )}

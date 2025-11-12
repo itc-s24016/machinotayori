@@ -11,7 +11,7 @@ export default async function Home() {
         <main className={styles.container}>
             <section className={styles.hero}>
                 <h1>まちのたより</h1>
-                <p>存在しない町の、暮らしの声をお届けします。</p>
+                <p>存在しない町の、暮らしの声をお届けします</p>
             </section>
 
             <section className={styles.newsSection}>

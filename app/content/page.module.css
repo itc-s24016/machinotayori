@@ -9,6 +9,7 @@
     border-left: 6px solid #006644;
     padding-left: 0.5rem;
     font-size: 1.5rem;
+    color: #006644;
     margin-bottom: 1.5rem;
 }
 
@@ -62,6 +63,18 @@
 
 .pageButton:hover {
     opacity: 0.9;
+}
+
+.thumbnail {
+    max-width: 100%;
+    height: auto;
+    margin-right: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+}
+
+.content {
+    color: #374151;
 }
 
 @media (max-width: 600px) {

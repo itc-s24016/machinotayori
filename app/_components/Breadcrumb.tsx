@@ -9,7 +9,7 @@ const pathNameMap: Record<string, string> = {
     government: "行政情報",
     contact: "お問い合わせ",
     access: "アクセス",
-    content: "お知らせ一覧"
+    content: "お知らせ・ニュース一覧",
 };
 
 export default function Breadcrumb() {
