@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #fafafa;
+    color: #222;
+    text-align: center;
+}
+
+/* 通常レイアウト */
+.normal {
+    flex-direction: column;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #006644;
+}
+
+.message {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* アクセス専用レイアウト（縦書き） */
+.vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* 縦書き内で横に改行する */
+    align-items: flex-start; /* 行頭を揃える */
+    justify-content: center;
+    background: #ffffff;
+    color: #333;
+}
+
+.vertical p {
+    white-space: normal;
+    text-align: start; /* 行頭を揃える */
+}
