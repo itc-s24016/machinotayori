@@ -65,12 +65,18 @@
     opacity: 0.9;
 }
 
+.thumbnailWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* アスペクト比を指定 */
+    overflow: hidden; /* トリミング */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
 .thumbnail {
-    max-width: 100%;
-    height: auto;
-    margin-right: 1rem;
-    margin-top: 0.3rem;
-    margin-bottom: 3rem;
+    object-fit: cover; /* トリミング */
+    object-position: center;
 }
 
 .content {
