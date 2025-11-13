@@ -1,17 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import {useState} from "react";
 import styles from "../styles/Header.module.css";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
 
     const navItems = [
-        { name: "お知らせ・ニュース", href: "/content" },
-        { name: "暮らしの案内", href: "/life" },
-        { name: "行政情報", href: "/government" },
-        { name: "お問い合わせ", href: "/contact" },
-        { name: "アクセス", href: "/access" },
+        {name: "お知らせ・ニュース", href: "/content"},
+        {name: "暮らしの案内", href: "/life"},
+        {name: "行政情報", href: "/government"},
+        {name: "お問い合わせ", href: "/contact"},
+        {name: "アクセス", href: "/access"},
     ];
 
     return (
@@ -58,7 +58,9 @@ export default function Header() {
                             <li key={item.name}>
                                 <Link
                                     href={item.href}
-                                    className={styles.navLink}
+                                    className={`${styles.navLink} ${
+                                        item.name === "アクセス" ? styles.accessLink : ""
+                                    }`}
                                     onClick={() => setOpen(false)}
                                 >
                                     {item.name}

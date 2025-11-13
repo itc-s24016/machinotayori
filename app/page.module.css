@@ -72,6 +72,22 @@
     text-decoration: none;
 }
 
+.moreLink a:hover {
+    animation: text-blur 0.5s;
+}
+
+@keyframes text-blur {
+    0% {
+        filter: blur(0);
+    }
+    50% {
+        filter: blur(4px); /* ぼかしの強さ */
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
 @media (max-width: 600px) {
     :global(main) {
         padding: 1rem;

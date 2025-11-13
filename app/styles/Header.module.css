@@ -61,12 +61,28 @@
 .navLink {
     display: block;
     padding: 0.5rem 1rem;
-    color: #374151;
+    color: #006644;
     text-decoration: none;
 }
 
 .navLink:hover {
-    color: #2563eb;
+    text-decoration: none;
+}
+
+.accessLink:hover {
+    animation: text-blur 1s;
+}
+
+@keyframes text-blur {
+    0% {
+        filter: blur(0);
+    }
+    50% {
+        filter: blur(4px); /* ぼかしの強さ */
+    }
+    100% {
+        filter: blur(0);
+    }
 }
 
 /* メニュー開いた時 */
