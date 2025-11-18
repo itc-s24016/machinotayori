@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {useState} from "react";
 import styles from "../styles/Header.module.css";
+import Image from "next/image";
 
 export default function Header() {
     const [open, setOpen] = useState(false);
@@ -18,7 +19,13 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.inner}>
                 <Link href="/" className={styles.logo}>
-                    まちのたより
+                    <Image
+                        src={"/市町村章.png"}
+                        alt={"市町村章"}
+                        height={70}
+                        width={70}
+                        priority
+                    />まちのたより
                 </Link>
 
                 <button
