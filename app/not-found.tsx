@@ -8,7 +8,9 @@ export default function NotFound() {
             <p className={styles.message}>
                 お探しのページは削除されたか、移動した可能性があります。
             </p>
-            <Link href="/">トップページへ戻る</Link>
+            <Link href="/" className={styles.backButton}>
+                トップページへ戻る
+            </Link>
         </main>
     );
 }

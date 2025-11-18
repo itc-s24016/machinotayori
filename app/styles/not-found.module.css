@@ -22,6 +22,26 @@
 .message {
     font-size: 1rem;
     color: #555;
+    margin-bottom: 1rem;
+}
+
+.backButton {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1.5rem;
+
+    background: #006644;
+    color: white;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.backButton:hover {
+    background: #004c33;
+    text-decoration: none;
 }
 
 /* アクセス専用レイアウト（縦書き） */
