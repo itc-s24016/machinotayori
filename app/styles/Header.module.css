@@ -11,17 +11,26 @@
 .inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.75rem 1rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #006644;
     text-decoration: none;
+}
+
+.logoImage {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
 }
 
 .menuButton {

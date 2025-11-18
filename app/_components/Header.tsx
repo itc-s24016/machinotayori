@@ -20,10 +20,11 @@ export default function Header() {
             <div className={styles.inner}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src={"/市町村章.png"}
-                        alt={"市町村章"}
-                        height={70}
-                        width={70}
+                        src="/市町村章.png"
+                        alt="市町村章"
+                        width={120}
+                        height={120}
+                        className={styles.logoImage}
                         priority
                     />まちのたより
                 </Link>
