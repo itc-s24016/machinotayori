@@ -1,3 +1,5 @@
+"use server";
+
 import {createClient} from "microcms-js-sdk";
 // microCMSから取得するデータの型を定義
 import type {
@@ -58,4 +60,12 @@ export const getAllNewsList = async (queries?: { limit?: number; offset?: number
         endpoint: "posts",
         queries,
     });
+};
+
+// メインページのスライドで使用する画像を取得する関数
+export const getSliderImages = async () => {
+    const images = await client.getList({
+        endpoint: "slider"
+    });
+    return images;
 };
