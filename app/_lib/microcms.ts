@@ -17,6 +17,11 @@ export type News = {
     publishedAt: string;
 } & MicroCMSListContent;
 
+// スライダーに使う画像データの型
+export type SliderImage = {
+    images: MicroCMSImage;
+} & MicroCMSListContent;
+
 // サービスドメインが設定されていない場合
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -34,11 +39,10 @@ const client = createClient({
 
 // 記事一覧を取得する関数
 export const getNewsList = async (queries?: MicroCMSQueries) => {
-    const listData = await client.getList<News>({
+    return client.getList<News>({
         endpoint: "posts",
         queries,
     });
-    return listData;
 };
 
 // 記事詳細を取得する関数
@@ -46,12 +50,11 @@ export const getNewsDetail = async (
     contentId: string,
     queries?: MicroCMSQueries
 ) => {
-    const detailData = await client.getListDetail<News>({
+    return client.getListDetail<News>({
         endpoint: "posts",
         contentId,
         queries,
     });
-    return detailData;
 };
 
 // 全ての記事を取得する関数
@@ -64,8 +67,7 @@ export const getAllNewsList = async (queries?: { limit?: number; offset?: number
 
 // メインページのスライドで使用する画像を取得する関数
 export const getSliderImages = async () => {
-    const images = await client.getList({
-        endpoint: "slider"
+    return client.getList<SliderImage>({
+        endpoint: "slider",
     });
-    return images;
 };
