@@ -26,11 +26,14 @@
     margin-bottom: 0.5rem;
 }
 
-.newsSection h2 {
-    border-left: 6px solid #006644;
+.newsSection {
     padding-left: 0.5rem;
     font-size: 1.4rem;
     margin-bottom: 1rem;
+}
+
+.views {
+    color: #006644;
 }
 
 .newsList {
@@ -63,6 +66,7 @@
 }
 
 .moreLink {
+    font-size: 18px;
     text-align: right;
     margin-top: 1rem;
 }
@@ -78,5 +82,8 @@
     }
     .hero h1 {
         font-size: 1.6rem;
+    }
+    .moreLink {
+        font-size: 14px;
     }
 }

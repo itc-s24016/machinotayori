@@ -15,7 +15,7 @@ export default async function Home() {
             </section>
 
             <section className={styles.newsSection}>
-                <h2>最新のお知らせ</h2>
+                <div className={styles.views}>最新のお知らせ</div>
                 <ul className={styles.newsList}>
                     {newsList.map((news) => (
                         <li key={news.id} className={styles.newsItem}>

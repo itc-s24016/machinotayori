@@ -28,6 +28,7 @@
 
 .logoImage {
     height: 70px;
+    padding-right: 10px;
     width: auto;
     object-fit: contain;
 }
@@ -115,5 +116,16 @@
 
     .navLink {
         padding: 0.25rem 0;
+    }
+}
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .logoImage {
+        height: 50px;
+        padding-right: 5px;
     }
 }
