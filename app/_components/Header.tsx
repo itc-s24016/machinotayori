@@ -8,10 +8,10 @@ export default function Header() {
     const [open, setOpen] = useState(false);
 
     const navItems = [
-        {name: "お知らせ・ニュース", href: "/content"},
+        {name: "お知らせ", href: "/content"},
         {name: "暮らしの案内", href: "/life"},
-        {name: "行政情報", href: "/government"},
-        {name: "お問い合わせ", href: "/contact"},
+        // {name: "行政情報", href: "/government"},
+        // {name: "お問い合わせ", href: "/contact"},
         {name: "アクセス", href: "/access"},
     ];
 
