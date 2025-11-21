@@ -84,6 +84,14 @@
 }
 
 @media (max-width: 600px) {
+    .newsTitle {
+        font-size: 1rem;
+        color: #006644;
+    }
+    .content {
+        font-size: 0.87rem;
+        color: #374151;
+    }
     .pageButton {
         width: 48%;
         text-align: center;
