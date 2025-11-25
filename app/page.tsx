@@ -1,6 +1,7 @@
 import {getNewsList, News} from "./_lib/microcms";
 import Link from "next/link";
 import HeroSlider from "./_components/HeroSlider";
+import NewsList from "./_components/NewsList";
 import styles from "./page.module.css";
 
 export default async function Home() {
@@ -16,18 +17,7 @@ export default async function Home() {
 
             <section className={styles.newsSection}>
                 <div className={styles.views}>最新のお知らせ</div>
-                <ul className={styles.newsList}>
-                    {newsList.map((news) => (
-                        <li key={news.id} className={styles.newsItem}>
-                            <Link href={`/content/${news.id}`} className={styles.newsLink}>
-                <span className={styles.newsDate}>
-                  {new Date(news.datetime).toLocaleDateString("ja-JP")}
-                </span>
-                                <span className={styles.newsTitle}>{news.title}</span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                <NewsList items={newsList} />
                 <div className={styles.moreLink}>
                     <Link href="/content">→ もっと見る</Link>
                 </div>

@@ -1,6 +1,7 @@
 import { getAllNewsList, News } from "../_lib/microcms";
 import Link from "next/link";
-import styles from "./page.module.css";
+import NewsList from "../_components/NewsList";
+import styles from "../styles/NewsList.module.css";
 
 export const revalidate = 60;
 
@@ -27,19 +28,7 @@ export default async function NewsListPage({ searchParams }: SearchParams) {
         <main className={styles.container}>
             <h1 className={styles.heading}>お知らせ</h1>
 
-            <ul className={styles.newsList}>
-                {newsList.map((news) => (
-                    <li key={news.id} className={styles.newsItem}>
-                        <Link href={`/content/${news.id}`} className={styles.newsLink}>
-              <span className={styles.newsDate}>
-                {new Date(news.datetime).toLocaleDateString("ja-JP")}
-              </span>
-                            <span className={styles.newsTitle}>{news.title}</span>
-                            <p className={styles.newsDescription}>{news.description}</p>
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+            <NewsList items={newsList} />
 
             <div className={styles.pagination}>
                 {currentPage > 1 ? (
