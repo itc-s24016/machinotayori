@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.pageButton {
+    padding: 0.4rem 0.8rem;
+    background: #006644;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+}
+
+.pageButton:hover {
+    opacity: 0.85;
+}
+
+.current {
+    font-weight: bold;
+    background: #004d33;
+}
+
+.ellipsis {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    color: #555;
+}

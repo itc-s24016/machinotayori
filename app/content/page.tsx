@@ -2,6 +2,7 @@ import { getAllNewsList, News } from "../_lib/microcms";
 import Link from "next/link";
 import NewsList from "../_components/NewsList";
 import styles from "../styles/NewsList.module.css";
+import Pagination from "@/app/_components/Pagination";
 
 export const revalidate = 60;
 
@@ -27,29 +28,12 @@ export default async function NewsListPage({ searchParams }: SearchParams) {
     return (
         <main className={styles.container}>
             <h1 className={styles.heading}>お知らせ</h1>
-
             <NewsList items={newsList} />
-
-            <div className={styles.pagination}>
-                {currentPage > 1 ? (
-                    <Link
-                        href={`/content?page=${currentPage - 1}`}
-                        className={styles.pageButton}
-                    >
-                        ← 前のページ
-                    </Link>
-                ) : (
-                    <span />
-                )}
-                {currentPage < totalPages && (
-                    <Link
-                        href={`/content?page=${currentPage + 1}`}
-                        className={styles.pageButton}
-                    >
-                        次のページ →
-                    </Link>
-                )}
-            </div>
+            <Pagination
+                currentPage={currentPage} // ← ここを固定値 6 から変数に変更
+                totalPages={totalPages}
+                basePath="/content?page="
+            />
         </main>
     );
 }
