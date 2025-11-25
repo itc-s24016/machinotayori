@@ -10,6 +10,8 @@ export default function Header() {
     const navItems = [
         {name: "お知らせ", href: "/content"},
         {name: "暮らしの案内", href: "/life"},
+        {name: "福祉・健康", href: "/health"},
+        {name: "子育て・教育", href: "/childcare"},
         // {name: "行政情報", href: "/government"},
         // {name: "お問い合わせ", href: "/contact"},
         {name: "アクセス", href: "/access"},

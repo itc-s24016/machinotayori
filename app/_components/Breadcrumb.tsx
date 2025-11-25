@@ -6,10 +6,13 @@ import styles from "../styles/Breadcrumb.module.css";
 const pathNameMap: Record<string, string> = {
     news: "お知らせ・ニュース",
     life: "暮らしの案内",
-    government: "行政情報",
-    contact: "お問い合わせ",
+    health: "福祉・健康",
+    childcare: "子育て・教育",
+    // government: "行政情報",
+    // contact: "お問い合わせ",
     access: "アクセス",
     content: "お知らせ・ニュース一覧",
+    pages: "📁",
 };
 
 export default function Breadcrumb() {
