@@ -17,7 +17,7 @@ export default async function ContentPage({params}: ContentPageProps) {
             <article className={styles.article}>
                 <h1 className={styles.heading}>{news.title}</h1>
                 <time className={styles.newsDate}>
-                    {new Date(news.publishedAt).toLocaleDateString("ja-JP")}
+                    {new Date(news.datetime).toLocaleDateString("ja-JP")}
                 </time>
                 {news.thumbnail && (
                     <div className={styles.thumbnailWrapper}>

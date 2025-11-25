@@ -14,7 +14,7 @@ export type News = {
     description: string;
     content: string;
     thumbnail: MicroCMSImage;
-    publishedAt: string;
+    datetime: string;
 } & MicroCMSListContent;
 
 // スライダーに使う画像データの型

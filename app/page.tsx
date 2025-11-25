@@ -1,17 +1,17 @@
-import { getNewsList, News } from "./_lib/microcms";
+import {getNewsList, News} from "./_lib/microcms";
 import Link from "next/link";
 import HeroSlider from "./_components/HeroSlider";
 import styles from "./page.module.css";
 
 export default async function Home() {
     // microCMSから最新3件を取得
-    const data = await getNewsList({ limit: 3, orders: "-publishedAt" });
+    const data = await getNewsList({limit: 3, orders: "-datetime"});
     const newsList: News[] = data.contents;
 
     return (
         <main className={styles.container}>
             <section className={styles.hero}>
-                <HeroSlider />
+                <HeroSlider/>
             </section>
 
             <section className={styles.newsSection}>
@@ -21,7 +21,7 @@ export default async function Home() {
                         <li key={news.id} className={styles.newsItem}>
                             <Link href={`/content/${news.id}`} className={styles.newsLink}>
                 <span className={styles.newsDate}>
-                  {new Date(news.publishedAt).toLocaleDateString("ja-JP")}
+                  {new Date(news.datetime).toLocaleDateString("ja-JP")}
                 </span>
                                 <span className={styles.newsTitle}>{news.title}</span>
                             </Link>

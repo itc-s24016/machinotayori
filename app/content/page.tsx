@@ -18,7 +18,7 @@ export default async function NewsListPage({ searchParams }: SearchParams) {
     const offset = (currentPage - 1) * limit;
 
     // microCMSから全記事を取得
-    const data = await getAllNewsList({ limit, offset, orders: "-publishedAt" });
+    const data = await getAllNewsList({ limit, offset, orders: "-datetime" });
     const newsList: News[] = data.contents;
     const totalCount = data.totalCount;
     const totalPages = Math.ceil(totalCount / limit);
@@ -32,7 +32,7 @@ export default async function NewsListPage({ searchParams }: SearchParams) {
                     <li key={news.id} className={styles.newsItem}>
                         <Link href={`/content/${news.id}`} className={styles.newsLink}>
               <span className={styles.newsDate}>
-                {new Date(news.publishedAt).toLocaleDateString("ja-JP")}
+                {new Date(news.datetime).toLocaleDateString("ja-JP")}
               </span>
                             <span className={styles.newsTitle}>{news.title}</span>
                             <p className={styles.newsDescription}>{news.description}</p>
