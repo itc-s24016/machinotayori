@@ -38,63 +38,20 @@
 
 .newsTitle {
     font-size: 1.2rem;
+    padding-left: 0.5rem;
     color: #006644;
-}
-
-
-.newsDescription {
-    font-size: 0.95rem;
-    margin-top: 0.3rem;
-    color: #444;
 }
 
 .pagination {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
-}
-
-.pageButton {
-    padding: 0.5rem 1rem;
-    background: #006644;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.pageButton:hover {
-    opacity: 0.9;
-}
-
-.thumbnailWrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3; /* アスペクト比を指定 */
-    overflow: hidden; /* トリミング */
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.thumbnail {
-    object-fit: cover; /* トリミング */
-    object-position: center;
-}
-
-.content {
-    color: #374151;
+    color: #006644;
 }
 
 @media (max-width: 600px) {
     .newsTitle {
         font-size: 1rem;
         color: #006644;
-    }
-    .content {
-        font-size: 0.87rem;
-        color: #374151;
-    }
-    .pageButton {
-        width: 48%;
-        text-align: center;
     }
 }

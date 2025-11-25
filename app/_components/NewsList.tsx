@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/NewsList.module.css";
 import {News} from "../_lib/microcms";
-import Image from "next/image";
 
 // ページ一覧だけ description を出すことで記事一覧と記事詳細ページの差別化をする
 type Props = {
@@ -12,7 +11,6 @@ type Props = {
 
 export default function NewsList({
                                      items,
-                                     showImage = false,
                                      showDescription = false
                                  }: Props) {
     return (
@@ -32,17 +30,6 @@ export default function NewsList({
                         <span className={styles.newsTitle}>
                             {news.title}
                         </span>
-                        {showImage && news.thumbnail && (
-                            <div className={styles.thumbnailWrapper}>
-                                <Image
-                                    src={news.thumbnail.url}
-                                    alt={news.title}
-                                    fill
-                                    priority
-                                    className={styles.thumbnail}
-                                />
-                            </div>
-                        )}
                         {showDescription && (
                             <p className={styles.newsDescription}>{news.description}</p>
                         )}

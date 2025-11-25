@@ -13,22 +13,10 @@
     margin-bottom: 1.5rem;
 }
 
-.pagination {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.pageButton {
-    padding: 0.5rem 1rem;
-    background: #006644;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.pageButton:hover {
-    opacity: 0.9;
+.newsDate {
+    font-size: 0.9rem;
+    color: #666;
+    padding-right: 10px;
 }
 
 .thumbnailWrapper {
@@ -57,9 +45,5 @@
     .content {
         font-size: 0.87rem;
         color: #374151;
-    }
-    .pageButton {
-        width: 48%;
-        text-align: center;
     }
 }
