@@ -1,8 +1,16 @@
-:global(main) {
-    background: #fff;
+:global(body) {
+    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
 .heading {
@@ -13,34 +21,46 @@
     margin-bottom: 1.5rem;
 }
 
-.newsDate {
-    font-size: 0.9rem;
-    color: #666;
-    padding-right: 10px;
+.bold {
+    font-weight: bold;
+    color: #444;
 }
 
-.thumbnailWrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3; /* アスペクト比を指定 */
-    overflow: hidden; /* トリミング */
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
+.pageList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.thumbnail {
-    object-fit: cover; /* トリミング */
-    object-position: center;
+.pageItem {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
 }
 
-.content {
-    color: #374151;
+.pageLink {
+    text-decoration: none;
+    color: #006644;
+    font-size: 1.1rem;
+}
+
+.link {
+    text-decoration: none;
+    color: mediumblue;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+.pageDescription {
+    display: block;
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.3rem;
 }
 
 @media (max-width: 600px) {
-    .newsTitle {
-        font-size: 1rem;
-        color: #006644;
+    .heading {
+        font-size: 1.1rem;
     }
     .content {
         font-size: 0.87rem;

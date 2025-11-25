@@ -14,11 +14,11 @@
 }
 
 .heading {
-    font-size: 1.8rem;
-    color: #006644;
     border-left: 6px solid #006644;
     padding-left: 0.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #006644;
+    margin-bottom: 1.5rem;
 }
 
 .bold {
@@ -56,4 +56,14 @@
     font-size: 0.95rem;
     color: #555;
     margin-top: 0.3rem;
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 1.1rem;
+    }
+    .content {
+        font-size: 0.87rem;
+        color: #374151;
+    }
 }

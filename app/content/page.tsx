@@ -1,7 +1,6 @@
 import { getAllNewsList, News } from "../_lib/microcms";
-import Link from "next/link";
 import NewsList from "../_components/NewsList";
-import styles from "../styles/NewsList.module.css";
+import styles from "./page.module.css"
 import Pagination from "@/app/_components/Pagination";
 
 export const revalidate = 60;
