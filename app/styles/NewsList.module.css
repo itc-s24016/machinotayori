@@ -1,10 +1,3 @@
-:global(main) {
-    background: #fff;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
 .heading {
     border-left: 6px solid #006644;
     padding-left: 0.5rem;
@@ -24,32 +17,24 @@
     padding: 1rem 0;
 }
 
-.newsLink {
-    text-decoration: none;
-    color: #222;
-    display: block;
-}
-
 .newsDate {
     font-size: 0.9rem;
     color: #666;
-    padding-right: 10px;
 }
 
 .newsTitle {
     font-size: 1.2rem;
+    display: block;
     padding-left: 0.5rem;
     color: #006644;
 }
 
-.pagination {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    color: #006644;
-}
-
 @media (max-width: 600px) {
+    .newsDate {
+        font-size: 0.7rem;
+        color: #666;
+        padding-right: 7px;
+    }
     .newsTitle {
         font-size: 1rem;
         color: #006644;

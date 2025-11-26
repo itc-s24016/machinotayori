@@ -62,3 +62,20 @@
     white-space: normal;
     text-align: start; /* 行頭を揃える */
 }
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.3rem;
+    }
+    .message {
+        font-size: 0.8rem;
+    }
+    .backButton {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    .vertical {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}

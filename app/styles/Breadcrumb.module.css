@@ -33,3 +33,10 @@
 .breadcrumb a:hover {
     text-decoration-line: none;
 }
+
+@media (max-width: 600px) {
+    .breadcrumb {
+        padding: 0 1rem;
+        font-size: 0.75rem;
+    }
+}

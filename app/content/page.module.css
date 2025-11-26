@@ -1,16 +1,8 @@
-:global(body) {
-    font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
-    margin: 0;
-    background: #f9f9f9;
-    color: #333;
-}
-
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
     background: #fff;
-    box-shadow: 0 0 6px rgba(0,0,0,0.05);
 }
 
 .heading {
@@ -21,49 +13,11 @@
     margin-bottom: 1.5rem;
 }
 
-.bold {
-    font-weight: bold;
-    color: #444;
-}
-
-.pageList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pageItem {
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
-}
-
-.pageLink {
-    text-decoration: none;
-    color: #006644;
-    font-size: 1.1rem;
-}
-
-.link {
-    text-decoration: none;
-    color: mediumblue;
-}
-.link:hover {
-    text-decoration: underline;
-}
-
-.pageDescription {
-    display: block;
-    font-size: 0.95rem;
-    color: #555;
-    margin-top: 0.3rem;
-}
-
 @media (max-width: 600px) {
     .heading {
         font-size: 1.1rem;
     }
     .content {
         font-size: 0.87rem;
-        color: #374151;
     }
 }

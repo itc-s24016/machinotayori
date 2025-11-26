@@ -24,7 +24,7 @@ export default function Page() {
     return (
         <main className={styles.container}>
             <h1 className={styles.heading}>暮らしの案内</h1>
-            <ul className={styles.pageList}>
+            <ul>
                 {pages.map((page) => (
                     <li key={page.href} className={styles.pageItem}>
                         <Link href={page.href} className={styles.pageLink}>

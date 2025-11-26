@@ -119,7 +119,7 @@
     }
 }
 /* スマホ対応 */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .logo {
         font-size: 1.15rem;
     }
@@ -127,5 +127,8 @@
     .logoImage {
         height: 50px;
         padding-right: 5px;
+    }
+    .navLink{
+        font-size: 0.95rem;
     }
 }

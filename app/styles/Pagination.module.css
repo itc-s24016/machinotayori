@@ -29,3 +29,14 @@
     padding: 0.4rem 0.8rem;
     color: #555;
 }
+
+@media (max-width: 600px) {
+    .pageButton {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+    .ellipsis {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.9rem;
+    }
+}
