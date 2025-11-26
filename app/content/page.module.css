@@ -5,6 +5,12 @@
     background: #fff;
 }
 
+.newsDate {
+    font-size: 0.9rem;
+    color: #666;
+    padding-right: 10px;
+}
+
 .heading {
     border-left: 6px solid #006644;
     padding-left: 0.5rem;
@@ -13,7 +19,24 @@
     margin-bottom: 1.5rem;
 }
 
+.thumbnailWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3; /* アスペクト比を指定 */
+    overflow: hidden; /* トリミング */
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.thumbnail {
+    object-fit: cover; /* トリミング */
+    object-position: center;
+}
+
 @media (max-width: 600px) {
+    .newsDate {
+        font-size: 0.8rem;
+    }
     .heading {
         font-size: 1.1rem;
     }
