@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://machinotayori.vercel.app/sitemap.xml

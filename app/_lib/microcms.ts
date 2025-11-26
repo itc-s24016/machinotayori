@@ -65,6 +65,13 @@ export const getAllNewsList = async (queries?: { limit?: number; offset?: number
     });
 };
 
+// 全記事を取得する関数（ページネーションなし）
+export const getAll = async () => {
+    return  client.getAllContents<News>({
+        endpoint: "posts",
+    });
+};
+
 // メインページのスライドで使用する画像を取得する関数
 export const getSliderImages = async () => {
     return client.getList<SliderImage>({
