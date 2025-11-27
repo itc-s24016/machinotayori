@@ -7,11 +7,9 @@ microCMSで記事を管理し、Next.js App Routerで表示します。
 
 - **フレームワーク**: Next.js 16.0.1 (App Router)
 - **言語**: TypeScript
-- **CMS**: microCMS
-- **スタイリング**: CSS Modules
+- **コンテンツ管理**: microCMS
+- **スタイル**: CSS Modules
 - **デプロイ**: Vercel
-
-## 主な機能
 
 ### 実装済み機能
 
@@ -37,7 +35,8 @@ microCMSで記事を管理し、Next.js App Routerで表示します。
 - サンプル記事のCMS管理
 
 ## ディレクトリ構成
-
+<details><summary>開く</summary>  
+  
 ```
 machinotayori/
 ├── app/                              
@@ -120,6 +119,8 @@ machinotayori/
 └── tsconfig.json                     
 ```
 
+</details>  
+  
 ## セットアップ
 
 ### 1. リポジトリのクローン
@@ -207,4 +208,14 @@ CMSに登録した画像が表示されていきます。
 【特殊な404ページ】  
 アクセスページは存在しない設定にしてあり、専用の404ページが表示されます。  
 ![アクセス404ページ](./preview/specialNotFound_Phone.png)  
+
+## 参考  
+・お知らせ等一覧ページのデザイン  
+　[国頭村のホームページ](http://www.vill.kunigami.okinawa.jp/)   
   
+・アクセス の NotFound のスタイル（縦書き）  
+　[行方不明点の公式ホームページ](https://yukuefumei.com/)  
+ 
+・記事の内容  
+　実在する市町村の各ホームページを参考にさせていただきました  
+　([那覇市](https://www.city.naha.okinawa.jp/)・[宜野湾市](https://www.city.naha.okinawa.jp/)・[国頭村](http://www.vill.kunigami.okinawa.jp/))  
