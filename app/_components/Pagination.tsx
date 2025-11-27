@@ -16,16 +16,16 @@ export default function Pagination({ currentPage, totalPages, basePath }: Props)
         // 先頭は必ず 1
         pages.push(1);
 
-        // 左側の省略
-        if (currentPage > 4) pages.push("...");
+        // 仕組みは、現在ページが 4 より大きい場合、左側に "..." を追加
+        if (currentPage > 3) pages.push("...");
 
-        // 現在ページ前後 2 ページ
-        for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+        // 仕組みは、
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
             if (i > 1 && i < totalPages) pages.push(i);
         }
 
-        // 右側の省略
-        if (currentPage < totalPages - 3) pages.push("...");
+        // 仕組みは、現在ページが totalPages - 3 より小さい場合、右側に "..." を追加
+        if (currentPage < totalPages - 2) pages.push("...");
 
         // 最後は必ず totalPages
         if (totalPages > 1) pages.push(totalPages);
