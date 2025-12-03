@@ -244,3 +244,15 @@ CMSに登録した画像が表示されていきます。
 ![](./preview/Screenshot_9.png)
 
 </details>
+
+【他の記事】  
+<details><summary>開く</summary>  
+  
+![](./preview/Screenshot_10.png)
+![](./preview/Screenshot_11.png)
+![](./preview/Screenshot_12.png)
+![](./preview/Screenshot_13.png)
+![](./preview/Screenshot_14.png)
+![](./preview/Screenshot_15.png)
+
+</details>
